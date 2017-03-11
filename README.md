@@ -22,15 +22,15 @@ The software required for this version of the Raspberry Pi Kiosk will be -
 
 The installation instructions assume that **Raspbian Debian Wheezy** is installed and **SSH** is enabled. Also the current installation of Raspbian boots into the GUI (Desktop).
 
-1. Download repository files
+- Download repository files
 
 Download the three files in this repository and place them into the ```/home/pi``` directory.
 
-2. Configure URL
+- Configure URL
 
 Open the **configuration** file and in there you will find a **key=value** line pair. It is here where the URL that we want to load is added. Change the part after **$URL=[Your URL]** to set the URL to load when the OS boots.
 
-3. Run the installer
+- Run the installer
 
 Make sure the **installKiosk.sh** file is executable. You may need to run the following command:
 
