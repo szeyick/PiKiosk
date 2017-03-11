@@ -34,11 +34,11 @@ Open the **configuration** file and in there you will find a **key=value** line 
 
 Make sure the **installKiosk.sh** file is executable. You may need to run the following command:
 
-```chmod u+x installKiosk.sh```
+`chmod u+x installKiosk.sh`
 
 Once it is executable, run the script:
 
-```./installKiosk.sh```
+`./installKiosk.sh`
 
 The script will install all the neccessary software components to allow the browser to run in kiosk (full screen) mode. It will do this by downloading the Epiphany Web Browser if it isn't already installed, along with the tools to allow a key press to be simulated (F11 is the default key to bring the browser into full screen mode).
 
@@ -50,15 +50,15 @@ Lastly it sets the permissions to the **fullscreen.sh** file and reboots the Ras
 
 From testing, there have been a few observable issues that have occured every so often.
 
-1. Epiphany not loading to full screen:
+- Epiphany not loading to full screen:
 
 There have been instances observed, where it seems to load into full screen, then something happens and it exits out of full screen mode. Not entirely sure what the root cause of this issue is, however it seems to be a timing issue of when the script executes when the system loads.
 
-2. Web page not loading:
+- Web page not loading:
 
 Sometimes when browser goes to load the web page, it appears to freeze momentarily which seems to prevent the browser to open the tab with the configured URL. This could be a possible performance issue as the script is trying to load the browser whilst the OS is still loading other bits and pieces.
 
-3. Task Bar Interference:
+- Task Bar Interference:
 
 My initial issue with Epiphany not loading into full screen mode, I thought had to do with the task bar. I ended up changing the Raspberry Pi configuration so that the task bar would be hidden when it is not in use. It resolved my issue but not too sure whether it is entirely neccessary. The link to change it is in the references section below.
 
