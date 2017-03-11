@@ -22,15 +22,15 @@ The software required for this version of the Raspberry Pi Kiosk will be -
 
 The installation instructions assume that **Raspbian Debian Wheezy** is installed and **SSH** is enabled. Also the current installation of Raspbian boots into the GUI (Desktop).
 
-- Download repository files
+- **Download repository files**
 
 Download the three files in this repository and place them into the ```/home/pi``` directory.
 
-- Configure URL
+- **Configure URL**
 
 Open the **configuration** file and in there you will find a **key=value** line pair. It is here where the URL that we want to load is added. Change the part after **$URL=[Your URL]** to set the URL to load when the OS boots.
 
-- Run the installer
+- **Run the installer**
 
 Make sure the **installKiosk.sh** file is executable. You may need to run the following command:
 
@@ -50,15 +50,15 @@ Lastly it sets the permissions to the **fullscreen.sh** file and reboots the Ras
 
 From testing, there have been a few observable issues that have occured every so often.
 
-- Epiphany not loading to full screen:
+- **Epiphany not loading to full screen:**
 
 There have been instances observed, where it seems to load into full screen, then something happens and it exits out of full screen mode. Not entirely sure what the root cause of this issue is, however it seems to be a timing issue of when the script executes when the system loads.
 
-- Web page not loading:
+- **Web page not loading:**
 
 Sometimes when browser goes to load the web page, it appears to freeze momentarily which seems to prevent the browser to open the tab with the configured URL. This could be a possible performance issue as the script is trying to load the browser whilst the OS is still loading other bits and pieces.
 
-- Task Bar Interference:
+- **Task Bar Interference:**
 
 My initial issue with Epiphany not loading into full screen mode, I thought had to do with the task bar. I ended up changing the Raspberry Pi configuration so that the task bar would be hidden when it is not in use. It resolved my issue but not too sure whether it is entirely neccessary. The link to change it is in the references section below.
 
