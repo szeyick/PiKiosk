@@ -52,11 +52,19 @@ From testing, there have been a few observable issues that have occured every so
 
 - **Epiphany not loading to full screen:**
 
-There have been instances observed, where it seems to load into full screen, then something happens and it exits out of full screen mode. Not entirely sure what the root cause of this issue is, however it seems to be a timing issue of when the script executes when the system loads.
+There have been instances observed, where upon start up the browser will load into full screen, then appears to flicker in an attempt to get into kiosk mode but will not succeed. This behaviour has only been observed when the script auto loads on start up. If the **fullscreen.sh** script is executed when the OS is booted, the browser boots into kiosk mode without an issue.
+
+Not too sure what the cause of this issue is as it seems to only happen on certain installs of Raspbian on the Raspberry Pi 3. It will still however boot until maximised mode without the browser address bar, which whilst seems to do 90% of the job, is still not perfect.
+
+If this does happen, it might also be useful to hide the taskbar with the following steps -
+
+`Right-click on the taskbar and select "Panel Settings". Click on the "Advanced" tab, and check "Minimize panel when not in use".`
 
 - **Web page not loading:**
 
-Sometimes when browser goes to load the web page, it appears to freeze momentarily which seems to prevent the browser to open the tab with the configured URL. This could be a possible performance issue as the script is trying to load the browser whilst the OS is still loading other bits and pieces.
+It has been observed that when using incognito mode, the browser sometimes fails to load the desired webpage. It could be related to a possible performance issue as the script is loading at the same time as the OS is trying to load everything else.
+
+A work around for this, if it happens is to remove the **-i** argument from the **fullscreen.sh** script to load Epiphany into normal browsing mode rather than incognito.
 
 - **Task Bar Interference:**
 
