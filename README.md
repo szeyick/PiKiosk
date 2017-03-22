@@ -28,7 +28,7 @@ Download the three files in this repository and place them into the ```/home/pi`
 
 - **Configure URL**
 
-Open the **configuration** file and in there you will find a **key=value** line pair. It is here where the URL that we want to load is added. Change the part after **$URL=[Your URL]** to set the URL to load when the OS boots.
+Open the **fullscreen.sh** file and in there you will find a URL in the script (default http://www.google.com.au). Replace this with the URL that you wish to display on system startup.
 
 - **Run the installer**
 
